@@ -2,14 +2,14 @@
   "name": "yyds-lang-shiki",
   "version": "0.0.0",
   "description": "Shiki language definition for yyds",
-  "license": "MIT",
   "homepage": "https://github.com/yyds-lang/yyds-lang-shiki#readme",
+  "bugs": {
+    "url": "https://github.com/yyds-lang/yyds-lang-shiki/issues"
+  },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/yyds-lang/yyds-lang-shiki.git"
-  },
-  "bugs": {
-    "url": "https://github.com/yyds-lang/yyds-lang-shiki/issues"
   },
   "files": [
     "dist"
@@ -23,12 +23,14 @@
   },
   "scripts": {
     "build": "vp pack",
-    "test": "vitest run"
+    "test": "vitest run",
+    "release": "bumpp"
   },
   "dependencies": {
     "@yyds-lang/textmate": "0.0.7"
   },
   "devDependencies": {
+    "bumpp": "^11.1.0",
     "shiki": "^4.1.0",
     "typescript": "^6.0.3",
     "vite-plus": "^0.1.22",
