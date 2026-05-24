@@ -13,8 +13,11 @@ export default defineConfig({
     trailingComma: 'none'
   },
   pack: {
-    entry: ['src/index.ts'],
+    entry: {
+      index: 'src/index.ts'
+    },
     dts: true,
+    exports: true,
     format: ['esm'],
     outDir: 'dist'
   }
