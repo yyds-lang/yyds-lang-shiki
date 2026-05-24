@@ -9,12 +9,18 @@ importers:
   .:
     dependencies:
       '@yyds-lang/textmate':
-        specifier: 0.0.7
-        version: 0.0.7
+        specifier: 0.0.8
+        version: 0.0.8
     devDependencies:
       bumpp:
         specifier: ^11.1.0
         version: 11.1.0
+      modern-monaco:
+        specifier: ^0.4.1
+        version: 0.4.1(typescript@6.0.3)
+      monaco-editor:
+        specifier: ^0.55.1
+        version: 0.55.1
       shiki:
         specifier: ^4.1.0
         version: 4.1.0
@@ -492,6 +498,9 @@ packages:
   '@types/mdast@4.0.4':
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
 
+  '@types/trusted-types@2.0.7':
+    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
+
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
 
@@ -673,8 +682,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@yyds-lang/textmate@0.0.7':
-    resolution: {integrity: sha512-7bWv45NiqS1XmERm+IqkZ6r3wFhswzRcnpCeUvJImnFDL5Xkbv0iLAhhdxU8FzHSZQUfPBV2hcMszK0mM0cDbg==}
+  '@yyds-lang/textmate@0.0.8':
+    resolution: {integrity: sha512-YcmVlyizIP2G/4hwCklC5DGoBFeyYU1eHwHbfypHTnl0zCJkoH1gL/AfN3YFOQG89FGSmTdygZSOV9wsT1dV0g==}
 
   args-tokenizer@0.3.0:
     resolution: {integrity: sha512-xXAd7G2Mll5W8uo37GETpQ2VrE84M181Z7ugHFGQnJZ50M2mbOv0osSZ9VsSgPfJQ+LVG0prSi0th+ELMsno7Q==}
@@ -724,6 +733,9 @@ packages:
 
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
+
+  dompurify@3.2.7:
+    resolution: {integrity: sha512-WhL/YuveyGXJaerVlMYGWhvQswa7myDG17P7Vu65EWC05o8vfeNbvNf4d/BOvH99+ZW+LlQsc1GDKMa1vNK6dw==}
 
   es-module-lexer@1.7.0:
     resolution: {integrity: sha512-jEQoCwk8hyb2AZziIOLhDqpm5+2ww5uIE6lkO/6jcOCusfk6LhMHpXXfBLXTZ7Ydyt0j4VoUQv6uGNYbdW+kBA==}
@@ -845,6 +857,11 @@ packages:
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
+  marked@14.0.0:
+    resolution: {integrity: sha512-uIj4+faQ+MgHgwUW1l2PsPglZLOLOT1uErt06dAPtx2kjteLAkbsd/0FiYg/MGS+i7ZKLb7w2WClxHkzOOuryQ==}
+    engines: {node: '>= 18'}
+    hasBin: true
+
   mdast-util-to-hast@13.2.1:
     resolution: {integrity: sha512-cctsq2wp5vTsLIcaymblUriiTcZd0CwWtCbLvrOzYCDZoWyMNV8sZ7krj09FSnsiJi3WVsHLM4k6Dq/yaPyCXA==}
 
@@ -862,6 +879,14 @@ packages:
 
   micromark-util-types@2.0.0:
     resolution: {integrity: sha512-oNh6S2WMHWRZrmutsRmDDfkzKtxF+bc2VxLC9dvtrDIRFln627VsFP6fLMgTryGDljgLPjkrzQSDcPrjPyDJ5w==}
+
+  modern-monaco@0.4.1:
+    resolution: {integrity: sha512-drOkjnDfoa5K9msKv2Ndsqko10WD/s4wXQEKyWJUEDHb1+Ca6AfSKw70J36LBufoLhtP/elqXzIp1tTvP67EPA==}
+    peerDependencies:
+      typescript: '>= 6.0.0'
+
+  monaco-editor@0.55.1:
+    resolution: {integrity: sha512-jz4x+TJNFHwHtwuV9vA9rMujcZRb0CEilTEwG2rRSpe/A7Jdkuj8xPKttCgOh+v/lkHy7HsZ64oj+q3xoAFl9A==}
 
   mrmime@2.0.1:
     resolution: {integrity: sha512-Y3wQdFg2Va6etvQ5I82yUhGdsKrcYox6p7FfL1LbK2J4V01F9TGlepTIhnK24t7koZibmg82KGglhA1XK5IsLQ==}
@@ -1440,6 +1465,9 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
+  '@types/trusted-types@2.0.7':
+    optional: true
+
   '@types/unist@3.0.3': {}
 
   '@ungap/structured-clone@1.3.1': {}
@@ -1559,7 +1587,7 @@ snapshots:
   '@voidzero-dev/vite-plus-win32-x64-msvc@0.1.22':
     optional: true
 
-  '@yyds-lang/textmate@0.0.7': {}
+  '@yyds-lang/textmate@0.0.8': {}
 
   args-tokenizer@0.3.0: {}
 
@@ -1600,6 +1628,10 @@ snapshots:
   devlop@1.1.0:
     dependencies:
       dequal: 2.0.3
+
+  dompurify@3.2.7:
+    optionalDependencies:
+      '@types/trusted-types': 2.0.7
 
   es-module-lexer@1.7.0: {}
 
@@ -1695,6 +1727,8 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
+  marked@14.0.0: {}
+
   mdast-util-to-hast@13.2.1:
     dependencies:
       '@types/hast': 3.0.4
@@ -1723,6 +1757,15 @@ snapshots:
   micromark-util-symbol@2.0.0: {}
 
   micromark-util-types@2.0.0: {}
+
+  modern-monaco@0.4.1(typescript@6.0.3):
+    dependencies:
+      typescript: 6.0.3
+
+  monaco-editor@0.55.1:
+    dependencies:
+      dompurify: 3.2.7
+      marked: 14.0.0
 
   mrmime@2.0.1: {}
 

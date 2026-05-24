@@ -17,6 +17,7 @@
   "type": "module",
   "exports": {
     ".": "./dist/index.mjs",
+    "./monaco": "./dist/monaco.mjs",
     "./package.json": "./package.json"
   },
   "scripts": {
@@ -25,14 +26,19 @@
     "release": "bumpp"
   },
   "dependencies": {
-    "@yyds-lang/textmate": "0.0.7"
+    "@yyds-lang/textmate": "0.0.8"
   },
   "devDependencies": {
     "bumpp": "^11.1.0",
+    "modern-monaco": "^0.4.1",
+    "monaco-editor": "^0.55.1",
     "shiki": "^4.1.0",
     "typescript": "^6.0.3",
     "vite-plus": "^0.1.22",
     "vitest": "^4.1.7"
+  },
+  "peerDependencies": {
+    "modern-monaco": "^0.4.1"
   },
   "packageManager": "pnpm@11.2.2"
 }

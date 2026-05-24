@@ -14,9 +14,14 @@ export default defineConfig({
   },
   pack: {
     entry: {
-      index: 'src/index.ts'
+      index: 'src/index.ts',
+      monaco: 'src/monaco/index.ts'
     },
     dts: true,
+    sourcemap: false,
+    deps: {
+      neverBundle: ['monaco-editor', 'modern-monaco']
+    },
     exports: true,
     format: ['esm'],
     outDir: 'dist'
