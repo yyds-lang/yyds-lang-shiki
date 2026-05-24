@@ -3,6 +3,14 @@
   "version": "0.0.0",
   "description": "Shiki language definition for yyds",
   "license": "MIT",
+  "homepage": "https://github.com/yyds-lang/yyds-lang-shiki#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yyds-lang/yyds-lang-shiki.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yyds-lang/yyds-lang-shiki/issues"
+  },
   "files": [
     "dist"
   ],
