@@ -19,29 +19,23 @@ const html = highlighter.codeToHtml('song demo', {
 })
 ```
 
-## Usage (Monaco with injected runtime)
+## Usage (Monaco Runtime API)
 
 ```ts
-import * as modernMonacoShiki from 'modern-monaco/shiki'
-import * as monaco from 'modern-monaco/editor-core'
-import { setupYydsMonaco, yydsLanguage } from 'yyds-lang-shiki/monaco'
+import { init } from 'modern-monaco/core'
+import { createYydsMonacoRuntime } from 'yyds-lang-shiki/monaco'
 
-// Ensure modern-monaco core installs default wasm loader once.
-await import('modern-monaco/core')
-
-const highlighter = await modernMonacoShiki.initShiki({
-  defaultTheme: 'vitesse-dark',
-  langs: [yydsLanguage]
+const monaco = await init({
+  defaultTheme: 'vitesse-dark'
 })
 
-modernMonacoShiki.initShikiMonacoTokenizer(monaco, highlighter)
-
-await setupYydsMonaco(monaco, {
-  shiki: modernMonacoShiki,
-  highlighter
+const runtime = createYydsMonacoRuntime({
+  defaultTheme: 'vitesse-dark'
 })
+
+await runtime.setup(monaco)
 
 const model = monaco.editor.createModel('song "Demo"\ntempo 120', 'yyds')
 ```
 
-`setupYydsMonaco` now requires host-provided Shiki bindings and a pre-initialized highlighter. This keeps the loader/highlighter lifecycle in one place and avoids duplicate runtime instances in monorepo/link setups.
+`createYydsMonacoRuntime()` provides a typed singleton highlighter workflow based on official `shiki` + `@shikijs/monaco`, and avoids direct usage of untyped `modern-monaco/shiki` subpath imports in app code.

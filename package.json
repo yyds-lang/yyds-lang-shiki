@@ -26,13 +26,14 @@
     "release": "bumpp"
   },
   "dependencies": {
-    "@yyds-lang/textmate": "0.0.8"
+    "@shikijs/monaco": "^3.15.0",
+    "@yyds-lang/textmate": "0.0.8",
+    "shiki": "^3.15.0"
   },
   "devDependencies": {
     "bumpp": "^11.1.0",
     "modern-monaco": "^0.4.1",
     "monaco-editor": "^0.55.1",
-    "shiki": "^4.1.0",
     "typescript": "^6.0.3",
     "vite-plus": "^0.1.22",
     "vitest": "^4.1.7"

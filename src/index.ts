@@ -1,8 +1,7 @@
 export { yydsLanguage } from './language'
 export type {
-  ShikiBindings,
-  ShikiHighlighter,
+  CreateYydsMonacoRuntimeOptions,
   ShikiSetupErrorCode,
-  SetupYydsMonacoOptions
+  YydsMonacoRuntime
 } from './monaco'
-export { ShikiSetupError } from './monaco'
+export { createYydsMonacoRuntime, ShikiSetupError, yydsMonacoLanguageConfiguration } from './monaco'
