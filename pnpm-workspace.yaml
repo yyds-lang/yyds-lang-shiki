@@ -1,5 +1,5 @@
 allowBuilds:
   esbuild: true
+
 minimumReleaseAgeExclude:
-  - '@yyds-lang/textmate@0.0.6'
-  - '@yyds-lang/textmate@0.0.7'
+  - '@yyds-lang/textmate'
