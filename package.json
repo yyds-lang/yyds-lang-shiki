@@ -1,6 +1,6 @@
 {
   "name": "yyds-lang-shiki",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Shiki language definition for yyds",
   "license": "MIT",
   "files": [
